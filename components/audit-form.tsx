@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { runAudit } from "@/lib/audit-engine";
 import AuditResult from "./audit-result";
+import { v4 as uuidv4 } from "uuid";
 const tools = [
   "ChatGPT",
   "Claude",
@@ -15,6 +16,7 @@ const tools = [
 
   const [result, setResult] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+  const [shareUrl, setShareUrl] = useState("");
 
   const [formData, setFormData] = useState({
     tool: "",
@@ -61,6 +63,12 @@ const tools = [
   console.log(auditResult);
 
   setResult(auditResult);
+
+  const auditId = uuidv4();
+
+    setShareUrl(
+  `${window.location.origin}/audit/${auditId}`
+    );
 
   setLoading(false);
 }
@@ -202,7 +210,48 @@ const tools = [
     </button>
 
       </form>
-      {result && <AuditResult result={result} />}
+      {result && (
+  <>
+    <AuditResult result={result} />
+
+    <div className="max-w-4xl mx-auto px-6 pb-24">
+
+      <div className="bg-gray-950 border border-gray-800 rounded-2xl p-6">
+
+        <h3 className="text-2xl font-semibold mb-3">
+          Share Audit Results
+        </h3>
+
+        <p className="text-gray-400 mb-6">
+          Share this audit with your team or stakeholders.
+        </p>
+
+        <div className="flex flex-col md:flex-row gap-4">
+
+          <input
+            type="text"
+            value={shareUrl}
+            readOnly
+            className="flex-1 bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-300"
+          />
+
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(shareUrl);
+              alert("Link copied!");
+            }}
+            className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+          >
+            Copy Link
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </>
+)}
     </section>
   );
 }
