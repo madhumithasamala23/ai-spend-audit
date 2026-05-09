@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { runAudit } from "@/lib/audit-engine";
 import AuditResult from "./audit-result";
 const tools = [
@@ -24,6 +24,19 @@ const tools = [
     teamSize: "",
     useCase: "",
   });
+  useEffect(() => {
+    const savedData = localStorage.getItem("audit-form");
+
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+    }
+  }, []);
+  useEffect(() => {
+  localStorage.setItem(
+    "audit-form",
+    JSON.stringify(formData)
+  );
+    }, [formData]);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
