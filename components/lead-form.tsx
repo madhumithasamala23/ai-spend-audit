@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 export default function LeadForm() {
 
@@ -21,15 +22,30 @@ export default function LeadForm() {
     });
   }
 
-  function handleSubmit(
-    e: React.FormEvent
-  ) {
-    e.preventDefault();
+  async function handleSubmit(
+  e: React.FormEvent
+) {
+  e.preventDefault();
 
-    console.log(formData);
+  const { error } = await supabase
+    .from("leads")
+    .insert([
+      {
+        email: formData.email,
+        company: formData.company,
+        role: formData.role,
+      },
+    ]);
 
-    setSubmitted(true);
+  if (error) {
+    console.error(error);
+
+    alert("Something went wrong.");
+    return;
   }
+
+  setSubmitted(true);
+}
 
   if (submitted) {
     return (
