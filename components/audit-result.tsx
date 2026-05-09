@@ -1,5 +1,6 @@
 import SavingsChart from "./savings-chart";
 import AISummary from "./ai-summary";
+import LeadForm from "./lead-form";
 interface AuditResultProps {
   result: {
     tool: string;
@@ -129,6 +130,7 @@ export default function AuditResult({
   savings={result.savings}
   recommendation={result.recommendation}
 />
+<LeadForm />
       </div>
 
     </section>

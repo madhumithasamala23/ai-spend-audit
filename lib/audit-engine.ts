@@ -7,7 +7,7 @@ export interface AuditResult {
   reason: string;
 }
 
-interface AuditInput {
+export interface AuditInput {
   tool: string;
   plan: string;
   spend: string;
