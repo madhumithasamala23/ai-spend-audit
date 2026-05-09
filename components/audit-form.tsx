@@ -14,6 +14,7 @@ const tools = [
   export default function AuditForm() {
 
   const [result, setResult] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     tool: "",
@@ -33,15 +34,23 @@ const tools = [
     });
   }
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  async function handleSubmit(e: React.FormEvent) {
+  e.preventDefault();
 
-    const auditResult = runAudit(formData);
+  setLoading(true);
 
-    console.log(auditResult);
+  await new Promise((resolve) =>
+    setTimeout(resolve, 2000)
+  );
 
-    setResult(auditResult);
-  }
+  const auditResult = runAudit(formData);
+
+  console.log(auditResult);
+
+  setResult(auditResult);
+
+  setLoading(false);
+}
 
   return (
     <section
@@ -172,11 +181,12 @@ const tools = [
         </div>
 
         <button
-          type="submit"
-          className="w-full bg-white text-black py-4 rounded-xl font-semibold hover:scale-[1.02] transition"
-        >
-          Generate Audit
-        </button>
+  type="submit"
+  disabled={loading}
+    className="w-full bg-white text-black py-4 rounded-xl font-semibold hover:scale-[1.02] transition disabled:opacity-50"
+    >
+    {loading ? "Analyzing..." : "Generate Audit"}
+    </button>
 
       </form>
       {result && <AuditResult result={result} />}
