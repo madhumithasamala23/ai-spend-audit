@@ -16,11 +16,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center px-6 pt-24 pb-32 min-h-screen">
 
-        <h1 className="text-5xl md:text-6xl font-bold max-w-5xl leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold max-w-5xl leading-tight">
           Stop Overspending on AI Tools
         </h1>
 
-        <p className="mt-6 text-lg text-gray-400 max-w-2xl">
+        <p className="mt-6 text-base sm:text-lg text-gray-400 max-w-2xl">
           Audit your AI stack instantly and discover smarter plans,
           cheaper alternatives, and hidden savings opportunities.
         </p>

@@ -26,7 +26,7 @@ export default function Stats() {
             className="bg-gray-950 border border-gray-800 rounded-2xl p-8 text-center hover:border-gray-600 hover:-translate-y-1 transition duration-300"
           >
 
-            <h3 className="text-5xl font-bold mb-3">
+            <h3 className="text-4xl md:text-5xl font-bold mb-3">
               {stat.value}
             </h3>
 
