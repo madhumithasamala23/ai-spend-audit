@@ -2,7 +2,10 @@ import { Shield, DollarSign, Zap } from "lucide-react";
 
 export default function Features() {
   return (
-    <section className="px-6 py-24 max-w-6xl mx-auto">
+    <section
+      id="features"
+      className="px-6 py-24 max-w-6xl mx-auto"
+    >
       
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold">
@@ -16,40 +19,55 @@ export default function Features() {
 
       <div className="grid md:grid-cols-3 gap-8">
 
-        <div className="border border-gray-800 rounded-2xl p-8 bg-gray-950">
-          <DollarSign className="w-10 h-10 mb-4 text-white" />
+        {/* Card 1 */}
+        <div className="border border-gray-800 rounded-2xl p-7 bg-gray-950 hover:border-gray-600 transition duration-300 hover:-translate-y-1">
 
-          <h3 className="text-2xl font-semibold mb-3">
-            Cost Optimization
-          </h3>
+          <div className="flex items-center gap-4 mb-4">
+            <DollarSign className="w-8 h-8 text-white" />
 
-          <p className="text-gray-400">
+            <h3 className="text-2xl font-semibold">
+              Cost Optimization
+            </h3>
+          </div>
+
+          <p className="text-gray-400 leading-relaxed">
             Discover cheaper plans and reduce unnecessary AI spending.
           </p>
+
         </div>
 
-        <div className="border border-gray-800 rounded-2xl p-8 bg-gray-950">
-          <Zap className="w-10 h-10 mb-4 text-white" />
+        {/* Card 2 */}
+        <div className="border border-gray-800 rounded-2xl p-7 bg-gray-950 hover:border-gray-600 transition duration-300 hover:-translate-y-1">
 
-          <h3 className="text-2xl font-semibold mb-3">
-            Instant Audit
-          </h3>
+          <div className="flex items-center gap-4 mb-4">
+            <Zap className="w-8 h-8 text-white" />
 
-          <p className="text-gray-400">
+            <h3 className="text-2xl font-semibold">
+              Instant Audit
+            </h3>
+          </div>
+
+          <p className="text-gray-400 leading-relaxed">
             Get a detailed spending analysis within seconds.
           </p>
+
         </div>
 
-        <div className="border border-gray-800 rounded-2xl p-8 bg-gray-950">
-          <Shield className="w-10 h-10 mb-4 text-white" />
+        {/* Card 3 */}
+        <div className="border border-gray-800 rounded-2xl p-7 bg-gray-950 hover:border-gray-600 transition duration-300 hover:-translate-y-1">
 
-          <h3 className="text-2xl font-semibold mb-3">
-            Smart Recommendations
-          </h3>
+          <div className="flex items-center gap-4 mb-4">
+            <Shield className="w-8 h-8 text-white" />
 
-          <p className="text-gray-400">
+            <h3 className="text-2xl font-semibold">
+              Smart Recommendations
+            </h3>
+          </div>
+
+          <p className="text-gray-400 leading-relaxed">
             Receive tailored optimization suggestions based on usage.
           </p>
+
         </div>
 
       </div>

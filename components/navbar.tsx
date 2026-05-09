@@ -6,9 +6,12 @@ export default function Navbar() {
         SpendPilot
       </h1>
 
-      <button className="bg-white text-black px-5 py-2 rounded-lg font-medium hover:scale-105 transition">
-        Get Started
-      </button>
+      <a
+  href="#audit-form"
+  className="bg-white text-black px-5 py-2 rounded-lg font-medium hover:scale-105 transition"
+  >
+  Get Started
+  </a>
 
     </nav>
   );

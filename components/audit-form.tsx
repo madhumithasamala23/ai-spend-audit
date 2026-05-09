@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { runAudit } from "@/lib/audit-engine";
 
 const tools = [
   "ChatGPT",
@@ -32,13 +33,19 @@ export default function AuditForm() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    console.log(formData);
+    const result = runAudit(formData);
 
-    alert("Audit submitted!");
+    console.log(result);
+
+        alert(
+  `Potential Savings: $${result.savings}/month`);
   }
 
   return (
-    <section className="max-w-3xl mx-auto px-6 py-24">
+    <section
+  id="audit-form"
+  className="max-w-3xl mx-auto px-6 py-24"
+    >
 
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold">

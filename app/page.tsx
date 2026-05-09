@@ -26,13 +26,19 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
 
-          <button className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
-            Start Free Audit
-          </button>
+          <a
+  href="#audit-form"
+  className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+  >
+  Start Free Audit
+  </a>
 
-          <button className="border border-gray-700 px-6 py-3 rounded-xl hover:bg-gray-900 transition">
-            Learn More
-          </button>
+          <a
+  href="#features"
+  className="border border-gray-700 px-6 py-3 rounded-xl hover:bg-gray-900 transition"
+  >
+  Learn More
+  </a>
 
         </div>
 
