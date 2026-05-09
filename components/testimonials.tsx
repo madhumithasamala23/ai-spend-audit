@@ -1,3 +1,5 @@
+import FadeIn from "./fade-in";
+
 export default function Testimonials() {
   return (
     <section className="px-6 py-24 max-w-6xl mx-auto">
@@ -29,17 +31,23 @@ export default function Testimonials() {
             key={index}
             className="border border-gray-800 rounded-2xl p-8 bg-gray-950 hover:border-gray-600 hover:-translate-y-1 transition duration-300"
           >
+            <FadeIn>
             <p className="text-gray-300 mb-6">
               "{item.text}"
             </p>
+            </FadeIn>
 
+            <FadeIn>
             <h3 className="font-semibold">
               {item.name}
             </h3>
+            </FadeIn>
 
+            <FadeIn>
             <p className="text-gray-500 text-sm">
               {item.role}
             </p>
+            </FadeIn>
           </div>
         ))}
 

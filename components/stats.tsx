@@ -1,3 +1,4 @@
+import FadeIn from "./fade-in";
 export default function Stats() {
 
   const stats = [
@@ -25,14 +26,18 @@ export default function Stats() {
             key={index}
             className="bg-gray-950 border border-gray-800 rounded-2xl p-8 text-center hover:border-gray-600 hover:-translate-y-1 transition duration-300"
           >
-
+            
+            <FadeIn>
             <h3 className="text-4xl md:text-5xl font-bold mb-3">
               {stat.value}
             </h3>
+            </FadeIn>
 
+            <FadeIn>
             <p className="text-gray-400 text-lg">
               {stat.label}
             </p>
+            </FadeIn>
 
           </div>
         ))}

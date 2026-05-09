@@ -1,4 +1,5 @@
 import { Shield, DollarSign, Zap } from "lucide-react";
+import FadeIn from "./fade-in";
 
 export default function Features() {
   return (
@@ -20,6 +21,7 @@ export default function Features() {
       <div className="grid md:grid-cols-3 gap-8">
 
         {/* Card 1 */}
+        <FadeIn>
         <div className="border border-gray-800 rounded-2xl p-7 bg-gray-950 hover:border-gray-600 transition duration-300 hover:-translate-y-1">
 
           <div className="flex items-center gap-4 mb-4">
@@ -35,8 +37,10 @@ export default function Features() {
           </p>
 
         </div>
+        </FadeIn>
 
         {/* Card 2 */}
+        <FadeIn>
         <div className="border border-gray-800 rounded-2xl p-7 bg-gray-950 hover:border-gray-600 transition duration-300 hover:-translate-y-1">
 
           <div className="flex items-center gap-4 mb-4">
@@ -52,8 +56,9 @@ export default function Features() {
           </p>
 
         </div>
-
+</FadeIn>
         {/* Card 3 */}
+        <FadeIn>
         <div className="border border-gray-800 rounded-2xl p-7 bg-gray-950 hover:border-gray-600 transition duration-300 hover:-translate-y-1">
 
           <div className="flex items-center gap-4 mb-4">
@@ -69,6 +74,7 @@ export default function Features() {
           </p>
 
         </div>
+        </FadeIn>
 
       </div>
     </section>
