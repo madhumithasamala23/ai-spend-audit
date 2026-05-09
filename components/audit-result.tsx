@@ -29,11 +29,50 @@ export default function AuditResult({
           </h2>
 
           <p className="text-gray-500 mt-2">
-            per month
-          </p>
+  monthly savings
+    </p>
+
+    <p className="text-green-400 mt-4 text-lg font-medium">
+  ${result.savings * 12}/year saved
+    </p>
 
         </div>
+    <div className="grid md:grid-cols-3 gap-6 mb-10">
 
+  <div className="bg-black border border-gray-800 rounded-2xl p-6 text-center">
+    <p className="text-gray-500 text-sm mb-2">
+      Monthly Savings
+    </p>
+
+    <h3 className="text-3xl font-bold text-green-400">
+      ${result.savings}
+    </h3>
+  </div>
+
+  <div className="bg-black border border-gray-800 rounded-2xl p-6 text-center">
+    <p className="text-gray-500 text-sm mb-2">
+      Annual Savings
+    </p>
+
+    <h3 className="text-3xl font-bold text-green-400">
+      ${result.savings * 12}
+    </h3>
+  </div>
+
+  <div className="bg-black border border-gray-800 rounded-2xl p-6 text-center">
+    <p className="text-gray-500 text-sm mb-2">
+      Optimization Rate
+    </p>
+
+    <h3 className="text-3xl font-bold text-white">
+      {Math.round(
+        (result.savings / result.currentSpend) * 100
+      )}
+      %
+    </h3>
+  </div>
+
+</div>
         {/* Details */}
         <div className="grid md:grid-cols-2 gap-6">
 
