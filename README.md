@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SpendPilot
 
-## Getting Started
+AI Spend Audit Platform for Modern Teams
 
-First, run the development server:
+SpendPilot helps startups and engineering teams analyze AI tool spending, discover optimization opportunities, and reduce unnecessary costs across platforms like ChatGPT, Claude, Cursor, Gemini, and GitHub Copilot.
+
+---
+
+## Live Demo
+
+🔗 https://spendpilot-pro.vercel.app/
+
+---
+
+## GitHub Repository
+
+🔗 https://github.com/madhumithasamala23/ai-spend-audit
+
+---
+
+## Features
+
+### AI Spend Audit
+- Analyze current AI tool usage and spending
+- Detect overspending opportunities
+- Generate optimization recommendations
+
+### Savings Insights
+- Monthly savings calculation
+- Annual savings estimation
+- Optimization percentage metrics
+
+### AI Insights
+- AI-generated audit summaries
+- Smart recommendation explanations
+- Personalized optimization suggestions
+
+### Interactive Dashboard
+- Modern SaaS landing page
+- Responsive design
+- Smooth animations
+- Interactive charts
+
+### Shareable Audit Results
+- Generate shareable audit links
+- Copy audit URLs instantly
+
+### Lead Capture System
+- Save audit reports
+- Collect user/company information
+- Store leads using Supabase backend
+
+### Backend Integration
+- Supabase database integration
+- Persistent lead storage
+- Real-time backend connectivity
+
+---
+
+## Tech Stack
+
+### Frontend
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+
+### Backend
+- Supabase
+
+### UI & Visualization
+- Framer Motion
+- Recharts
+- Lucide React
+
+### Deployment
+- Vercel
+
+---
+
+## Screenshots
+
+### Landing Page
+Modern SaaS-style interface with animated sections and AI audit flow.
+
+### Audit Results
+Interactive savings dashboard with charts, recommendations, and AI insights.
+
+### Lead Capture
+Integrated backend-powered audit save workflow.
+
+---
+
+## Installation
+
+Clone the repository:
 
 ```bash
+git clone https://github.com/madhumithasamala23/ai-spend-audit.git
+
+
+Navigate into the project:
+
+cd ai-spend-audit
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a .env.local file in the root directory:
 
-## Learn More
+NEXT_PUBLIC_SUPABASE_URL=https://diujtvawpoyjetzwvmxu.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_3BXr82P0CgJ35cH5AEcnDg_TgZL1CVC
 
-To learn more about Next.js, take a look at the following resources:
+Future Improvements
+Multi-tool audit support
+Real AI API integration
+PDF report export
+Email notifications
+Team collaboration dashboard
+Advanced analytics
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project was developed as part of the Credex Web Development Internship Assignment 2026.
