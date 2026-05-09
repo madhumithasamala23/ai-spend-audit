@@ -1,12 +1,21 @@
 import Navbar from "@/components/navbar";
+import Features from "@/components/features";
+import HowItWorks from "@/components/how-it-works";
+import Testimonials from "@/components/testimonials";
+import Footer from "@/components/footer";
+
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black text-white overflow-hidden">
-      <Navbar />
+    <main className="relative bg-black text-white overflow-hidden">
+
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(120,119,198,0.3),transparent_50%)]" />
-      <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
-        
-        <h1 className="text-6xl font-bold max-w-4xl leading-tight">
+
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center px-6 min-h-[85vh]">
+
+        <h1 className="text-5xl md:text-6xl font-bold max-w-5xl leading-tight">
           Stop Overspending on AI Tools
         </h1>
 
@@ -15,7 +24,8 @@ export default function Home() {
           cheaper alternatives, and hidden savings opportunities.
         </p>
 
-        <div className="flex gap-4 mt-8">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+
           <button className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
             Start Free Audit
           </button>
@@ -23,9 +33,19 @@ export default function Home() {
           <button className="border border-gray-700 px-6 py-3 rounded-xl hover:bg-gray-900 transition">
             Learn More
           </button>
+
         </div>
 
       </section>
+
+      <Features />
+
+      <HowItWorks />
+
+      <Testimonials />
+
+      <Footer />
+
     </main>
   );
 }
