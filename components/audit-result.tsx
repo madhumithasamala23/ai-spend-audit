@@ -1,6 +1,7 @@
 import SavingsChart from "./savings-chart";
 import AISummary from "./ai-summary";
 import LeadForm from "./lead-form";
+import HighSavingsBanner from "./high-savings-banner";
 interface AuditResultProps {
   result: {
     tool: string;
@@ -129,6 +130,9 @@ export default function AuditResult({
   tool={result.tool}
   savings={result.savings}
   recommendation={result.recommendation}
+/>
+<HighSavingsBanner
+  savings={result.savings}
 />
 <LeadForm />
       </div>
