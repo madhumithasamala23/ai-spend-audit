@@ -1,4 +1,5 @@
 import SavingsChart from "./savings-chart";
+import AISummary from "./ai-summary";
 interface AuditResultProps {
   result: {
     tool: string;
@@ -122,6 +123,11 @@ export default function AuditResult({
       <SavingsChart
   currentSpend={result.currentSpend}
   optimizedSpend={result.optimizedSpend}
+/>
+      <AISummary
+  tool={result.tool}
+  savings={result.savings}
+  recommendation={result.recommendation}
 />
       </div>
 
