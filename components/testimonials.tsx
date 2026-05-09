@@ -27,7 +27,7 @@ export default function Testimonials() {
         ].map((item, index) => (
           <div
             key={index}
-            className="border border-gray-800 rounded-2xl p-8 bg-gray-950"
+            className="border border-gray-800 rounded-2xl p-8 bg-gray-950 hover:border-gray-600 hover:-translate-y-1 transition duration-300"
           >
             <p className="text-gray-300 mb-6">
               "{item.text}"

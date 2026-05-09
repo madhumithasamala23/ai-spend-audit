@@ -50,7 +50,7 @@ export default function LeadForm() {
   return (
     <div
   id="lead-form"
-  className="bg-black border border-gray-800 rounded-2xl p-6 mt-8"
+  className="bg-black border border-gray-800 rounded-2xl p-6 mt-8 hover:border-gray-600 transition duration-300"
     >
 
       <h3 className="text-2xl font-semibold mb-2">

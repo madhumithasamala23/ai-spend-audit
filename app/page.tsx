@@ -4,6 +4,7 @@ import HowItWorks from "@/components/how-it-works";
 import Testimonials from "@/components/testimonials";
 import Footer from "@/components/footer";
 import AuditForm from "@/components/audit-form";
+import Stats from "@/components/stats";
 export default function Home() {
   return (
     <main className="relative bg-black text-white overflow-hidden">
@@ -13,7 +14,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center px-6 min-h-[85vh]">
+      <section className="flex flex-col items-center justify-center text-center px-6 pt-24 pb-32 min-h-screen">
 
         <h1 className="text-5xl md:text-6xl font-bold max-w-5xl leading-tight">
           Stop Overspending on AI Tools
@@ -43,6 +44,7 @@ export default function Home() {
         </div>
 
       </section>
+      <Stats />
       <AuditForm />
       <Features />
 

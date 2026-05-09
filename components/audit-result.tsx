@@ -107,7 +107,7 @@ export default function AuditResult({
         </div>
 
         {/* Recommendation */}
-        <div className="mt-8 bg-black rounded-2xl p-6 border border-gray-800">
+        <div className="mt-8 bg-black rounded-2xl p-6 border border-gray-800 hover:border-gray-600 hover:-translate-y-1 transition duration-300">
 
           <p className="text-gray-500 text-sm mb-2">
             Recommendation

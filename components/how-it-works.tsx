@@ -17,7 +17,7 @@ export default function HowItWorks() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="border border-gray-800 rounded-2xl p-8 bg-gray-950"
+            className="border border-gray-800 rounded-2xl p-8 bg-gray-950 hover:border-gray-600 hover:-translate-y-1 transition duration-300"
           >
             <div className="text-5xl font-bold text-gray-700 mb-4">
               0{index + 1}
