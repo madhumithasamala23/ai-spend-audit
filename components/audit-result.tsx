@@ -1,3 +1,4 @@
+import SavingsChart from "./savings-chart";
 interface AuditResultProps {
   result: {
     tool: string;
@@ -118,7 +119,10 @@ export default function AuditResult({
           </p>
 
         </div>
-
+      <SavingsChart
+  currentSpend={result.currentSpend}
+  optimizedSpend={result.optimizedSpend}
+/>
       </div>
 
     </section>
