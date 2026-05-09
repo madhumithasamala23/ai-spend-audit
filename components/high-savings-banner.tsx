@@ -30,9 +30,12 @@ export default function HighSavingsBanner({
 
       </p>
 
-      <button className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
-        Book Credex Consultation
-      </button>
+      <a
+  href="#lead-form"
+  className="inline-block bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+>
+  Book Credex Consultation
+    </a>
 
     </div>
   );
