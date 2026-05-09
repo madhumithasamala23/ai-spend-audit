@@ -3,7 +3,7 @@ import Features from "@/components/features";
 import HowItWorks from "@/components/how-it-works";
 import Testimonials from "@/components/testimonials";
 import Footer from "@/components/footer";
-
+import AuditForm from "@/components/audit-form";
 export default function Home() {
   return (
     <main className="relative bg-black text-white overflow-hidden">
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
 
       </section>
-
+      <AuditForm />
       <Features />
 
       <HowItWorks />
