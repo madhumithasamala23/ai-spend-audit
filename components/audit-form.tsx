@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { runAudit } from "@/lib/audit-engine";
-
+import AuditResult from "./audit-result";
 const tools = [
   "ChatGPT",
   "Claude",
@@ -11,7 +11,10 @@ const tools = [
   "Gemini",
 ];
 
-export default function AuditForm() {
+  export default function AuditForm() {
+
+  const [result, setResult] = useState<any>(null);
+
   const [formData, setFormData] = useState({
     tool: "",
     plan: "",
@@ -33,12 +36,11 @@ export default function AuditForm() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    const result = runAudit(formData);
+    const auditResult = runAudit(formData);
 
-    console.log(result);
+    console.log(auditResult);
 
-        alert(
-  `Potential Savings: $${result.savings}/month`);
+    setResult(auditResult);
   }
 
   return (
@@ -177,6 +179,7 @@ export default function AuditForm() {
         </button>
 
       </form>
+      {result && <AuditResult result={result} />}
     </section>
   );
 }
